@@ -1,0 +1,53 @@
+// Global Styles
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+// Main Styles
+
+.main {
+    width: 100%;
+    height: 100%;
+    background: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        position: absolute;
+        width: 3rem;
+        height: .25rem;
+        background: slateblue;
+
+        &:nth-child(1) {
+            background: salmon;
+            animation: lineAnimation 2s ease-in-out forwards infinite;
+            position: absolute;
+        }
+
+        &:nth-child(2) {
+            width: 3rem;
+            animation: lineAnimation -1s 2s ease-in-out forwards infinite;
+            position: relative;
+            
+            @keyframes lineAnimation {
+                0%, 100% {
+                    width: 0rem;
+                }
+
+                50% {
+                    width: 3rem;
+                }
+            }
+        }
+    }
+}
